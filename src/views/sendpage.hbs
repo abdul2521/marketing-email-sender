@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Email sender</title>
+</head>
+
+<body>
+  {{>dashheader}}
+
+  <div class="mt-[8rem] px-4 sm:px-12 md:px-44 lg:px-[14rem] space-y-4">
+
+
+    <a href="" class="bg-blue-700 py-2 text-white font-bold rounded duration-100 hover:bg-blue-500 px-4">Go Back</a>
+    <div class=" capitalize space-y-4">
+      <h2 class="text-blue-800 font-bold text-xxl">enter your email tamplet here</h2>
+      <form action="/send" method="post">
+        <div class="flex flex-col space-y-4 ">
+          <div>
+
+            <input type="text" name="subject" placeholder="Enter your Subject here"
+              class="outline-none border-2 border-gray-400 w-[40rem] py-1">
+          </div>
+          <textarea name="emailtamplet" id="" cols="30" rows="10" placeholder="email tamplet here...."
+            class="outline-none border-2 border-gray-400"></textarea>
+          <button type="submit"
+            class="bg-blue-700 py-2 text-white font-bold rounded duration-100 hover:bg-blue-500">SEND</button>
+        </div>
+      </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

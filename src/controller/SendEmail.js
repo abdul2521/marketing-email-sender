@@ -1,0 +1,5 @@
+
+
+const getemail=(req,res)=>{
+    
+}

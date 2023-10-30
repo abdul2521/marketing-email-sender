@@ -15,7 +15,6 @@
 
   <div class="mt-[8rem] px-4 sm:px-12 md:px-44 lg:px-[14rem] space-y-4">
     <div class=" capitalize">
-
       <h1 class="text-blue-700 font-bold text-2xl">Send your marketing emails</h1>
       <ol style="list-style-type: decimal;" class="px-4">
         <li>Upload CSV file</li>
@@ -26,13 +25,37 @@
 
     </div>
 
-    <div class="bg-gray-200 px-4 py-8 rounded content-center text-center">
-      <p class="text-xl py-2">Upload CSV file here</p>
-      <input type="file">
-
+  
+    <div class="bg-gray-400 px-4 py-8 rounded content-center text-center">
+   
+      <a  href="/tamplet" class="text-xl text-white py-2">Download CSV Tamplet </a>
+    
     </div>
-  </div>
+    <form action="/readcsv" method="POST" enctype="multipart/form-data">
 
+    <div class="bg-blue-600 px-4 py-8 rounded content-center text-center">
+      <p class="text-xl py-2 text-white">Upload CSV file here</p>
+      
+      <input type="file" name="file" required>
+    </div>
+      <button type="submit" class="bg-blue-600 px-8 py-2 m-4 text-white rounded">Next</button>
+  </div>
+    </form>
+
+
+
+<script>
+const token = {{token}}; // Replace with the actual token received
+localStorage.setItem("token", token);
+const storedToken = localStorage.getItem("token");
+console.log(storedToken);
+document.getElementById("show").innerText = 'This is a test';
+
+
+
+const Message="{{message}}"
+window.alert(Message)
+</script>
 </body>
 
 </html>
